@@ -4,7 +4,7 @@ A multi-modal system for controlling large arrays of hobby servos in 2-DOF (Degr
 
 This repository contains the project files for a scaleable framework designed to serve as the foundation for complex kinetic art installations, enabling the precise, choreographed movement of many individual 2-axis mechanisms.
 
-![Servo Configuration](link/to/your/servo_configuration_image.png)
+![Servo Configuration](servo_configuration_image.png)
 
 ## Features
 
@@ -64,6 +64,11 @@ OUTPUT: [Computer/TouchDesigner (Processor/VPL)] ---> (WiFi/Network UDP) ---> [E
 3.  **Run TouchDesigner:** Open `motor-control-system_005v2-1.toe`. The network is configured to send OSC data to the ESP32's IP address (update the IP address in the `OSC Out CHOP`).
 4.  **Interact:** Use the buttons at the top of the Touchdesigner network switch between inputs running through the switch_inputMaster Chop to the OSC Out chop.
 
+### Note: Python Script for Keyframe Generation
+
+The `motor-control-system_005v2-1.toe` file contains a Python script (`generate_keys_script`) designed to automate the creation of keyframe animations.
+
+This script provides a fast, data-driven way to create and modify complex choreographies. Instead of manually editing curves in the Animation Editor, you can simply define servo "poses" in a table (`null_table_keys`), and the script will automatically generate the correctly formatted `keys` table to drive the Animation COMP.
 
 ### Project Links & Demos
 *   **Project Write-up:** [https://stevenmbenton.com/hobby-servo-control-system/](https://stevenmbenton.com/hobby-servo-control-system/)
