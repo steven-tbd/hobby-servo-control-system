@@ -1,4 +1,4 @@
-# Hobby Servo Control System
+# Scalable Multi-Servo Control
 
 A multi-modal system for controlling large arrays of hobby servos in 2-DOF (Degrees of Freedom) configurations using TouchDesigner and an ESP32 microcontroller.
 
@@ -71,5 +71,5 @@ The `motor-control-system_005v2-1.toe` file contains a Python script (`generate_
 This script provides a fast, data-driven way to create and modify complex choreographies. Instead of manually editing curves in the Animation Editor, you can simply define servo "poses" in a table (`null_table_keys`), and the script will automatically generate the correctly formatted `keys` table to drive the Animation COMP.
 
 ### Project Links & Demos
-*   **Project Write-up:** [https://stevenmbenton.com/hobby-servo-control-system/](https://stevenmbenton.com/hobby-servo-control-system/)
+*   **Project Write-up:** [https://stevenmbenton.com/project/scalable-multi-servo-control/](https://stevenmbenton.com/project/scalable-multi-servo-control/)
 *   **YouTube Demo:** [Gesture-Controlled 2-axis mechanisms](https://youtu.be/UZ0vq4jCJZ0)
