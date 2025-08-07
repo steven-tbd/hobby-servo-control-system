@@ -22,14 +22,13 @@ This repository contains the project files for a scaleable framework designed to
 ## I/O Diagram
 
 ```version-2
-INPUT:  [Leap Motion Camera (Sensor)] ---> (USB HID) ---> [Computer/TouchDesigner (Processor/VPL)]
-OUTPUT: [Computer/TouchDesigner (Processor/VPL)] ---> (WiFi/Network UDP) ---> [ESP32/C++ (Microcontroller Board/Arduino IDE)] ---> (I2C) ---> [PCA9685 (Motor Control Board)] ---> (PWM) ---> [12x Hobby Servos (Actuator)]
+[Leap Motion Camera (Sensor)] ---> (USB HID) ---> [Computer, TouchDesigner (Processor, VPL)] ---> (WiFi/Network UDP) ---> [ESP32, Custom Firmware (Microcontroller Board, C++)] ---> (I2C) ---> [PCA9685 (Motor Control Board)] ---> (PWM) ---> [12x Hobby Servos (Actuator)] 
 ```
 
-> - This workflow can switch between inputs from TouchDesigner: Leap Motion camera, manual, and pre-defined movement.
-> - Motor movements are created using the Animation Comp in TouchDesigner.
-> - For installations, the networked protocol connection should be switched to a tethered Serial link for reliability.
-
+>- Development Environment: The C++ firmware for the ESP32 was developed using the Arduino IDE.
+>- This workflow can switch between live Leap Motion input and pre-defined movements running in TouchDesigner's Animation COMP.
+>- For installations, the networked (WiFi/Network UDP) connection is often replaced with a tethered (Serial) link for reliability.
+>- Default ESP32 I2C pins: GPIO 21 (SDA) and GPIO 22 (SCL).
 ---
 
 ## Repository Contents
